@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="../style.css">
+   <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+<div class="row">
+<div class="col half1">
+ <nav>
+<ul>
+ <li><a href="../index.html" > <i class="fa fa-home"></i> Home</a></li>
+ <li class="bord"><a href="../profile.html"><i class="fa fa-address-card-o"></i> Profile</a></li>
+<li class="bord"><a href="../hack.html" class="active"><i class="fa fa-graduation-cap"></i> Hacking</a></li>
+ <li class="bord"><a href="#"><i class="fa fa-search"></i> Find People</a></li>
+ <li class="bord"><a href="#"><i class="fa fa-wechat (alias)"></i> Chat Room</a></li>
+<li class="bord"><a href="#"><i class="fa fa-shopping-basket "></i> BW Market</a></li>
+<li class="bord"><a href="#"><i class="fa fa-credit-card-alt "></i> BW Credit Cards</a></li>
+<li class="bord"><a href="#"><i class="fa fa-dollar (alias)"></i> BW Finance</a></li>
+  <li class="bord"><a href="#"><i class="fa fa-money"></i> Transaction History</a></li>
+  <li class="bord"><a href="#"><i class="fa fa-globe"></i> Sister Sites</a></li>
+<li class="bord"><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+ </ul>
+ </nav>
+</div>
+            
+ <div class="col half0 ">
+  <header>
+                          <div class="col third">
+                                <img src="../img/logo1.png" class="logo">
+                                
+                          </div>
+                            
+                          <h2> The Black Widow Network
+
+                                <span class="cen">CryingAngel237 <i class="fa fa-caret-down"></i> </span>
+                          </h2>
+                         
+                      </header>
+ <div class="center hacc">
+ <h1 class="cyan">Folder Blaster</h1>
+ <h3>Doing the old stuff in new ways</h3>
+
+<p>Most of the commands we use to make batch files are actually the same commands first implemented in MS-DOS, an ancient microsoft OS. These DOS or Disk Operating System commands can also be used in the command prompt window. Whateer your batch file does, you can dot in in the Command Line Interface (CLI).</p>
+
+<p>You will soon be learning how to hack into a remote computer and get the CMD window of the victim's computer. We recommend that you getb used to CLI as much as you can and as much as possible. Before getting to the code, lets take a look at a couple of commands.</p>
+
+<p><span class="cyan">md (mkdir) or Make Directory</span> - this command is used to make a folder.</p>
+
+<p><span class="cyan">cd - change directory</span> - this command is used to change current directory. </p>
+
+<p>Here we've got the <span class="cyan">folder blaster virus.</span> We will be doing a bunch of folders, opening them all at once and keep them open, effectively hogging a big portion of the memory causing windows to lag, freeze up, or sometimes crash.</p>
+
+<div class="left">
+  
+<p class="green">@echo off <br> cd ./Desktop <br> md1 <br> md2  <br> md3 <br> md4 <br>md5 <br> md6 <br>md7 <br> md8 <br>md9 <br> md0 <br> :confirm <br>start1 <br> start2 <br> start3 <br> start4 <br> start5 <br> start6 <br> start7 <br> start8 <br> start9 <br> start0 <br>goto confirm</p>
+
+</div>
+
+<p>So we begin by turning off echo. Then we chage directory to desktop. Now we create ten folders with names 0-9. We setup a label and start opening up all the ten folders. Now the final statement causes an infinite loop. Ig the folder is opened it will be opened again. So the victim will be stuck as every time he/she closes a folder it opens up again, eventually making them give up and restart the computer. </p>
+
+<p>The above code can be made much shorter with the use of loops, as discussed below. We start by creating a variable and setting it to 0. We use this variable as a check to let the computer know when to comeout of the loop. </p>
+
+<div class="left">
+  
+  <p class="green">@echo off <br> set /a i=0 <br> :loop <br> if %i%==10 goto end <br> echo This is iteration %i%. <br> set a/ i=%i%+1 <br> goto loop <br> :end</p>
+</div>
+
+<p><span class="cyan">set</span> is used to define and initialize a variable. Here we create a variable called "i" and set its value to 0. After setting up a label, we checkn if the value of the variable i (given by %i%) is equal to 10, and if it is we goto the label end. Now we echo to notify the user which iteration is currently running. In the next step we increment the value of i by one and then go back to the if statement. </p>
+
+<p>So the loop runs ten times and stops.  </p>
+<button class="btn"> <i class="fa fa-chevron-left"></i><a href="../hack.html"> Go Back</a> </button>
+
+<button class="btn"> <i class="fa fa-chevron-right"></i><a href="../tutor/beyond.html"> Next Lesson</a> </button>
+
+</div>
+</div>
+               
+    </div>
+    <script type="text/Javascript" src="./lib/jquery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="../style.css">
+   <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+<div class="row">
+<div class="col half1">
+ <nav>
+<ul>
+ <li><a href="../index.html" > <i class="fa fa-home"></i> Home</a></li>
+ <li class="bord"><a href="../profile.html"><i class="fa fa-address-card-o"></i> Profile</a></li>
+<li class="bord"><a href="../hack.html" class="active"><i class="fa fa-graduation-cap"></i> Hacking</a></li>
+ <li class="bord"><a href="#"><i class="fa fa-search"></i> Find People</a></li>
+ <li class="bord"><a href="#"><i class="fa fa-wechat (alias)"></i> Chat Room</a></li>
+<li class="bord"><a href="#"><i class="fa fa-shopping-basket "></i> BW Market</a></li>
+<li class="bord"><a href="#"><i class="fa fa-credit-card-alt "></i> BW Credit Cards</a></li>
+<li class="bord"><a href="#"><i class="fa fa-dollar (alias)"></i> BW Finance</a></li>
+  <li class="bord"><a href="#"><i class="fa fa-money"></i> Transaction History</a></li>
+  <li class="bord"><a href="#"><i class="fa fa-globe"></i> Sister Sites</a></li>
+<li class="bord"><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
+ </ul>
+ </nav>
+</div>
+            
+ <div class="col half0 ">
+  <header>
+                          <div class="col third">
+                                <img src="../img/logo1.png" class="logo">
+                                
+                          </div>
+                            
+                          <h2> The Black Widow Network
+
+                                <span class="cen">CryingAngel237 <i class="fa fa-caret-down"></i> </span>
+                          </h2>
+                         
+                      </header>
+ <div class="center hacc">
+ <h1 class="cyan">ZIP Bomb</h1>
+ <h3>Will blow your mind</h3>
+ <p>A <span class="cyan">zip bomb</span>, also known as the decompression bomb and the zip of death, is a malicious archive file designed to crash or render useless the program or system reading it. It is often employed to disable antiviruses. Rather than hijacking the normal operation of the program, a zip bomb allows the program to run as intended, but the archive is carefully crafted so that the unpacking requires inordinate amounts of time, disk space, and memory. </p>
+
+ <p>The classic zip bomb is a tiny zip file, most are measured in kilobytes. However, when this file is unzipped its contents are more than what the system can handle. </p>
+
+ <p>Various compression software and tools make use of what's called <span class="cyan">Lossless Compression Algorithms</span>. As the name suggests, these algorithms strive to compress files without any loss of information. Clearly, when we compress a file we'd definitely want to get it back in the same shape after decompressing. These algorithms usually explot statistical redundancy in such a way as to represent the sender's data more concisely without the error. In english: we know that the computer only understands 0s and 1s, so every single program or any data stored in your computer is actually just a series of binaries. Lossless compression is possible because most real-wporld data has statistical redundancy. Lossless compression schemes are reversible so that the original data can be reconstructed. However, lossless data algo will always fail to compress some files. This is why zipping or rarring a file sometimes works great and sometimes not.</p>
+
+ <p>Back to zip bombs, but before taking a deeper look, lets get the basic meaninng cleared up. Create a new text file and write '0' a 1000 times. Save it, the file should only be around 1kb. Open the file, copy the entire 0s, and paste it again on the text file for ten times. This time, the file should be around 10kb. Do this repeatedly until the text editor itself lags. When that happens, thats your cue to slow down because different operating systems and softwares can have unexpected behavior when dealing with large files. Keep it for around 1 to 5 gigabytes. </p>
+
+<p>The next step is to compress the file. You'll notice that the file size gets up to megabytes instead. </p>
+ 
+<p>Now for a deeper look, lets check out the most famous zip bomb, the <span class="cyan">42.zip</span> file. It is a zip file consisting of a 42 kb of compressed data, containing five layers of nested zip files in sets of 16, each bottom layer archive containing a 4.3 gb, approximately 4.5 pentabytes of uncompressed data. This file is still available for download on  various websites across the internet. In many antivirus scanners, only a few layers of recursion are performed on archives to help prevent attacks that would cause a butter overflow an out of memory condition, or exceed an acceptable amount of program execution time. Zip bombs often rely on repetition of identical files to achieve their extreme compression ratios. Dynamic programming methods can be employed to limit traversal of such files, so that only one file is followed recursively at each level.</p>
+
+<p>Here's a small website dedicated solely to the 42.zip file. <a href="https://www.unforgettable.dk/">https://www.unforgettable.dk/</a>. You can even download a ready made zip file from there. Password for the zip file is '42'. The file has a password to protect users who have ancient antivirus software that is set to automatically scan all downloads. </p>
+
+<p>Zip bombs is not a very accurate name for such malicious file. If you extract a zip bomb, it wont do anything on your computer, it willl just create 16 smaller bombs. If you decompress one of those it'll yield 16 more zip bombs. As such, they're not going to explode when someone opens them , they're just used by malware authors to knock out antivirus software so that malware can work without watching its back. A malicious program may plant a zip bomb somewhere near it as bait for the antivirus. The program will wait until the AV comes up for a routine scan and it will wait, hiding behind the zip bomb. When the AV reaches the bomb, it will try to open, all in its limited memory. 1 file becomes 16, which becomes 256, and it goes on until the memory is full. In reality though, the computer never runs out of memory because each process is only allowed to use so much memory, after it hits its limit it crashes itself to protect the rest of the computer from an <span class="cyan">OOM (Out-of-Memory)</span> event. When this happens to an antivirus program as its trying to dig into the file for malware, the software simply crashes and exits, while leaving the rest of the computer unharmed. The malware will detect this, and will then use that opportunity to do whatever it wants, without having to worry about AV software that might be around the corner. Additionally, the nested archives makes it much harder for programs like virus scanners to be smart and refuse to unpack files that are too large, because until the last level the total amount of data is not that much, you dont see how large the file in the lowest level are until you have reached that level, which is too late. However, most AV softwares recognizes a zip bomb when it sees one, and skips over it, alerting the user of the malware. They usually go down to the second or third level before flagging the file.</p>
+
+<p>Further, you wouldn't notice disk space being used because zip bombs only decompress in an antivirus program's memory, and not on the disk. Most manual archive-opening programs don't even have recursive opening mode for this reason. Plus, you also wouldn't notice much extra work by the CPU, because zip bombs workn so fast they can knock out an inadequately protected AV program in seconds, while only using a fraction of the total computer's memory.</p>
+
+<p>The 42.zip is just one example, there are many more like this and you can your own. A similar file is an XML-based decompression bomb called <span class="cyan">Billion Laughs or XML Bomb</span>. Basically it crashes a web browser by causing the XML parser to run out of memory. But most browsers today will detect such recursive expansion and simply not try to parse the booby-trapped XML. </p>
+
+<p>There's even a torrent for one of the largest and smallest zip bombs on the internet although it seems all the seeders have long gone. Its a 5.61kb file that expands up to 4 zettabytes. It seems to be at the absolute limit of zip bombs. Here is the KickAss torrent link: <span class="cyan"><a href="http://kickass.to/zip-bomb-insanely-huge-zip-archive-4zb-t2105770.html">http://kickass.to/zip-bomb-insanely-huge-zip-archive-4zb-t2105770.html</a></span>  </p>
+
+<p>And that ends the story of zip bombs. These actually come under the class of logic bombs, which also contains the fork bomb we made using batch files. Yet again, the name DDOS is going to pop up here. Zip bombs are basically DDOSers for antiviruses. Limited memory is a flaw that has remained in all computers since their inception and hackers always find a way to exploit it. When the old methods stop working, new ones soon pop up and take their place. DDOSing, zip bombs, fork bombs, XML bombs, PDF bombs, buffer overflows and what not. This shows what a crucial part of programming memory management is. And so, we live another day, ready to combat the problem.</p>
+
+
+<button class="btn"> <i class="fa fa-chevron-left"></i><a href="../hack.html"> Go Back</a> </button>
+
+<button class="btn"> <i class="fa fa-chevron-right"></i><a href="../tutor/phishing.html"> Next Lesson</a> </button>
+
+</div>
+</div>
+               
+    </div>
+    <script type="text/Javascript" src="./lib/jquery.js"></script>
+
+</body>
+</html>
